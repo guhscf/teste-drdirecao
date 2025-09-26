@@ -16,7 +16,7 @@ export default function Depoimentos() {
   useEffect(() => {
     async function fetchReviews() {
       try {
-        const res = await fetch("/.netlify/functions/reviews");
+        const res = await fetch("http://localhost:5000/reviews");
         const data = await res.json();
 
         if (data.result && data.result.reviews) {
